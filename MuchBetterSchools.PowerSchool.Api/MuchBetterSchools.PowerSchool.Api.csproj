@@ -17,8 +17,4 @@
       <ProjectReference Include="..\MuchBetterSchools.PowerSchool.Graph\MuchBetterSchools.PowerSchool.Graph.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Content Remove="appsettings.json" />
-    </ItemGroup>
-
 </Project>

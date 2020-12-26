@@ -3,7 +3,7 @@ using MuchBetterSchools.PowerSchool.Services.Students;
 
 namespace MuchBetterSchools.PowerSchool.Graph
 {
-    public class Query
+    public sealed class Query
     {
         private readonly IPowerSchoolStudentService _powerSchoolStudentService;
 

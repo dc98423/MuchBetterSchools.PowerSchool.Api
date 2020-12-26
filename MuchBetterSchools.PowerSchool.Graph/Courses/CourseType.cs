@@ -2,7 +2,7 @@
 
 namespace MuchBetterSchools.PowerSchool.Graph.Courses
 {
-    public class CourseType : ObjectType<Course>
+    public sealed class CourseType : ObjectType<Course>
     {       
     }
 }

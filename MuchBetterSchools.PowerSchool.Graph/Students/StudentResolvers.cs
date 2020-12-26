@@ -8,7 +8,7 @@ using MuchBetterSchools.PowerSchool.Services.Course;
 
 namespace MuchBetterSchools.PowerSchool.Graph.Students
 {
-    public class StudentResolvers
+    public sealed class StudentResolvers
     {
         public async Task<IEnumerable<Course>> GetCourses(
             [Parent] Student student,
