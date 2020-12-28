@@ -23,9 +23,5 @@ namespace MuchBetterSchools.PowerSchool.Graph.Students
         public DateTime DateOfBirth { get; set; }
 
         public string CurrentGradeLevel { get; set; }
-        
-        public School CurrentSchool { get; set; }
-        
-        public Enrollment CurrentEnrollment { get; set; }
     }
 }
