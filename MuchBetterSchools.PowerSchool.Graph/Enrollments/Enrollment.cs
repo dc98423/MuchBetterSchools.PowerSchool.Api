@@ -24,7 +24,5 @@ namespace MuchBetterSchools.PowerSchool.Graph.Enrollments
         public string DistrictOfResidence { get; set; }
 
         public string Track { get; set; }
-        
-        public IEnumerable<SectionEnrollment> SectionEnrollments { get; set; }
     }
 }
