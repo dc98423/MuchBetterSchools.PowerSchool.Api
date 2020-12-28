@@ -2,7 +2,11 @@
 
 namespace MuchBetterSchools.PowerSchool.Graph.Enrollments
 {
-    public sealed class EnrollmentType : ObjectType<Enrollment>
+    public class EnrollmentType : ObjectType<Enrollment>
     {
+        protected override void Configure(IObjectTypeDescriptor<Enrollment> descriptor)
+        {
+            descriptor.Include<EnrollmentResolvers>();
+        }
     }
 }

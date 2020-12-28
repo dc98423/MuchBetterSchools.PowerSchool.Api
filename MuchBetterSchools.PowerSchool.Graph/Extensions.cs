@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+
 using System.Collections.Generic;
 using MuchBetterSchools.PowerSchool.Graph.Courses;
 using MuchBetterSchools.PowerSchool.Graph.Enrollments;
@@ -41,8 +42,13 @@ namespace MuchBetterSchools.PowerSchool.Graph
         {
             return new Student()
             {
+                Id = powerSchoolStudent.StudentId.ToString(),
+                StudentNumber = powerSchoolStudent.StudentNumber,
+                StateStudentNumber = powerSchoolStudent.StateStudentNumber,
                 FirstName = powerSchoolStudent.FirstName,
-                StudentNumber = powerSchoolStudent.StudentNumber
+                LastName = powerSchoolStudent.LastName,
+                DateOfBirth = powerSchoolStudent.DateOfBirth,
+                CurrentGradeLevel = powerSchoolStudent.CurrentGradeLevel.ToString()
             };
         }
 
@@ -50,6 +56,7 @@ namespace MuchBetterSchools.PowerSchool.Graph
         {
             return new Enrollment()
             {
+                StudentId = powerSchoolEnrollment.StudentId.ToString(),
                 GradeLevel = powerSchoolEnrollment.GradeLevel,
                 EntryCode = powerSchoolEnrollment.EntryCode,
                 EntryDate = powerSchoolEnrollment.EntryDate.ToString(),
@@ -90,7 +97,7 @@ namespace MuchBetterSchools.PowerSchool.Graph
             {
                 Section = powerSchoolSectionEnrollment.PowerSchoolSection.ToGraphType(),
                 Dropped = powerSchoolSectionEnrollment.Dropped.ToString(),
-                EntryDate = powerSchoolSectionEnrollment.ToString() ?? string.Empty,
+                EntryDate = powerSchoolSectionEnrollment.EntryDate.ToString() ?? string.Empty,
                 ExitDate = powerSchoolSectionEnrollment.ExitDate.ToString(),
                 StudentId = powerSchoolSectionEnrollment.StudentId.ToString()
             };

@@ -5,6 +5,7 @@ using MuchBetterSchools.PowerSchool.Graph.Courses;
 using MuchBetterSchools.PowerSchool.Graph.Enrollments;
 using MuchBetterSchools.PowerSchool.Graph.Schools;
 using MuchBetterSchools.PowerSchool.Graph.SectionEnrollments;
+using MuchBetterSchools.PowerSchool.Services.SectionEnrollments;
 
 namespace MuchBetterSchools.PowerSchool.Graph.Students
 {
@@ -26,7 +27,5 @@ namespace MuchBetterSchools.PowerSchool.Graph.Students
         public School CurrentSchool { get; set; }
         
         public Enrollment CurrentEnrollment { get; set; }
-        
-        public IEnumerable<SectionEnrollment> CurrentSectionEnrollments { get; set; }
     }
 }

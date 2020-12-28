@@ -2,6 +2,7 @@
 using MuchBetterSchools.PowerSchool.Graph;
 using MuchBetterSchools.PowerSchool.Graph.Courses;
 using MuchBetterSchools.PowerSchool.Graph.Enrollments;
+using MuchBetterSchools.PowerSchool.Graph.Schools;
 using MuchBetterSchools.PowerSchool.Graph.SectionEnrollments;
 using MuchBetterSchools.PowerSchool.Graph.Sections;
 using MuchBetterSchools.PowerSchool.Graph.Students;
@@ -21,11 +22,13 @@ namespace MuchBetterSchools.PowerSchool.Api
             services
                 .AddGraphQLServer()
                 .AddType<CourseType>()
-                .AddType<Enrollment>()
-                .AddType<Section>()
-                .AddType<SectionEnrollment>()
+                .AddType<EnrollmentType>()
+                .AddType<SectionType>()
+                .AddType<SectionEnrollmentType>()
                 .AddType<StudentType>()
                 .AddType<StudentQuery>()
+                .AddType<SchoolType>()
+                .BindResolver<EnrollmentResolvers>()
                 .BindResolver<StudentResolvers>()
                 .AddQueryType<Query>();
         }

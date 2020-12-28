@@ -11,7 +11,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\MuchBettterSchools.PowerSchool.Api\MuchBetterSchools.PowerSchool.Services\MuchBetterSchools.PowerSchool.Services.csproj" />
+      <ProjectReference Include="..\MuchBetterSchools.PowerSchool.Services\MuchBetterSchools.PowerSchool.Services.csproj" />
     </ItemGroup>
-
 </Project>

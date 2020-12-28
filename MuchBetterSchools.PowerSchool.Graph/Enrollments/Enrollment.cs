@@ -1,7 +1,14 @@
-﻿namespace MuchBetterSchools.PowerSchool.Graph.Enrollments
+﻿using System.Collections;
+using System.Collections.Generic;
+using MuchBetterSchools.PowerSchool.Graph.Courses;
+using MuchBetterSchools.PowerSchool.Graph.SectionEnrollments;
+
+namespace MuchBetterSchools.PowerSchool.Graph.Enrollments
 {
     public class Enrollment
     {
+
+        public string StudentId { get; set; }
         public string GradeLevel { get; set; }
         
         public string EntryCode { get; set; }
@@ -17,5 +24,7 @@
         public string DistrictOfResidence { get; set; }
 
         public string Track { get; set; }
+        
+        public IEnumerable<SectionEnrollment> SectionEnrollments { get; set; }
     }
 }
