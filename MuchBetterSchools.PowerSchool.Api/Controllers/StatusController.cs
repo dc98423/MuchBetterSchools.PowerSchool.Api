@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace MuchBettterSchools.PowerSchool.Api.Controllers
+namespace MuchBetterSchools.PowerSchool.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
