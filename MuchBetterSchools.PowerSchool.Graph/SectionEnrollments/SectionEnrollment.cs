@@ -4,14 +4,14 @@ namespace MuchBetterSchools.PowerSchool.Graph.SectionEnrollments
 {
     public class SectionEnrollment
     {
-        public Section Section { get; set; }
+        public Section Section { get; set; } = null!;
         
-        public string StudentId { get; set; }
+        public string StudentId { get; set; } = null!;
         
-        public string EntryDate { get; set; }
+        public string EntryDate { get; set; } = null!;
 
-        public string ExitDate { get; set; }
+        public string? ExitDate { get; set; }
         
-        public string Dropped { get; set; }
+        public string? Dropped { get; set; }
     }
 }

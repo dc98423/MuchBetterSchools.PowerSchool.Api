@@ -12,7 +12,7 @@ namespace MuchBetterSchools.PowerSchool.Services.Enrollments
             string schoolId,
             string districtOfResidence,
             string track,
-            string? exitCode = null,
+            string exitCode = null,
             DateTime? exitDate = null)
         {
             StudentId = studentId;
@@ -33,7 +33,7 @@ namespace MuchBetterSchools.PowerSchool.Services.Enrollments
 
         public DateTime EntryDate { get; }
 
-        public string? ExitCode { get; }
+        public string ExitCode { get; }
         
         public DateTime? ExitDate { get; }
 

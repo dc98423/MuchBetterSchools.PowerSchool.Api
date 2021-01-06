@@ -10,5 +10,7 @@ namespace MuchBetterSchools.PowerSchool.Services.Students
         public Task<IEnumerable<PowerSchoolStudent>> GetAll(string schoolId);
 
         public Task<PowerSchoolStudent> Get(string studentNumber);
+
+        public Task<PowerSchoolStudent> Get(int id);
     }
 }

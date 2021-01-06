@@ -12,12 +12,12 @@ namespace MuchBetterSchools.PowerSchool.Services.Sections
             // When implemented. Get the count first. Set up pagination. Determin number of batchs to reduce concurrent calls
             // to acceptable. Send batches and compile result to return. The graph will be responsible for caching the results.
 
-            return new List<PowerSchoolSection>()
+            return await Task.FromResult(new List<PowerSchoolSection>()
             {
                 MockSection(schoolAndYear),
                 MockSection(schoolAndYear),
                 MockSection(schoolAndYear)
-            };
+            });
         }
 
         private PowerSchoolSection MockSection((string,string) schoolAndYear)

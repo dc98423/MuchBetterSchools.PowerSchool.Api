@@ -52,6 +52,18 @@ namespace MuchBetterSchools.PowerSchool.Graph
             };
         }
 
+        public static IEnumerable<Student> ToGraphType(this IEnumerable<PowerSchoolStudent> powerSchoolStudents)
+        {
+            var result = new List<Student>();
+
+            foreach (var student in powerSchoolStudents)
+            {
+                result.Add(student.ToGraphType());
+            }
+
+            return result;
+        }
+
         public static Enrollment ToGraphType(this PowerSchoolEnrollment powerSchoolEnrollment)
         {
             return new Enrollment()
@@ -68,6 +80,18 @@ namespace MuchBetterSchools.PowerSchool.Graph
             };
         }
 
+
+        public static IEnumerable<Enrollment> ToGraphType(this IEnumerable<PowerSchoolEnrollment> powerSchoolEnrollments)
+        {
+            var result = new List<Enrollment>();
+
+            foreach (var powerSchoolEnrollment in powerSchoolEnrollments)
+            {
+                result.Add(powerSchoolEnrollment.ToGraphType());
+            }
+
+            return result;
+        }
         public static School ToGraphType(this PowerSchoolSchool powerSchoolSchool)
         {
             return new School()

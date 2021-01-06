@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 using HotChocolate;
 using HotChocolate.Resolvers;
 using MuchBetterSchools.PowerSchool.Graph.SectionEnrollments;
+using MuchBetterSchools.PowerSchool.Graph.Students;
 using MuchBetterSchools.PowerSchool.Services.SectionEnrollments;
 using MuchBetterSchools.PowerSchool.Services.Sections;
+using MuchBetterSchools.PowerSchool.Services.Students;
 
 namespace MuchBetterSchools.PowerSchool.Graph.Enrollments
 {
@@ -82,6 +84,15 @@ namespace MuchBetterSchools.PowerSchool.Graph.Enrollments
 
                 return result;
             }
+        }
+
+        public async Task<Student> GetStudent(
+            [Parent] Enrollment thisEnrollment,
+            [Service] IPowerSchoolStudentService studentService,
+            IResolverContext context)
+        {
+            var found = await studentService.Get(thisEnrollment.StudentId);
+            return found.ToGraphType();
         }
     }
 }

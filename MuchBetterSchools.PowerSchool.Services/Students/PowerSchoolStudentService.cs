@@ -40,10 +40,17 @@ namespace MuchBetterSchools.PowerSchool.Services.Students
 
         public async Task<PowerSchoolStudent> Get(string studentNumber)
         {
-            return await Task.FromResult(this.MockStudent(studentNumber));
+            return await Task.FromResult(this.MockStudent(studentNumber: studentNumber));
         }
 
-        private PowerSchoolStudent MockStudent(string? studentNumber = null)
+        public async Task<PowerSchoolStudent> Get(int id)
+        {
+            return await Task.FromResult(this.MockStudent(studentId: id));
+        }
+
+        private PowerSchoolStudent MockStudent(
+            string studentNumber = null,
+            int? studentId = null)
         {
             return new PowerSchoolStudent(
                 new Random().Next(1,1000),

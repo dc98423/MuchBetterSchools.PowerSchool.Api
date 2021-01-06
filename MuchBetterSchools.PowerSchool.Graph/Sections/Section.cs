@@ -2,12 +2,12 @@
 {
     public class Section
     {
-        public string Id { get; set; }
-        public string SchoolId { get; set; }
-        public string CourseId { get; set; }
-        public string TermId { get; set; }
-        public string SectionNumber { get; set; }
-        public string Expression { get; set; }
-        public string StaffId { get; set; }
+        public string Id { get; set; } = null!;
+        public string SchoolId { get; set; } = null!;
+        public string CourseId { get; set; } = null!;
+        public string TermId { get; set; } = null!;
+        public string SectionNumber { get; set; } = null!;
+        public string Expression { get; set; } = null!;
+        public string? StaffId { get; set; }
     }
 }
