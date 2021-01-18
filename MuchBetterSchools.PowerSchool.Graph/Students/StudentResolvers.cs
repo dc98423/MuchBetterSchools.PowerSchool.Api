@@ -1,21 +1,11 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
 using HotChocolate;
 using HotChocolate.Resolvers;
-using MuchBetterSchools.PowerSchool.Graph.Courses;
 using MuchBetterSchools.PowerSchool.Graph.Enrollments;
 using MuchBetterSchools.PowerSchool.Graph.Schools;
-using MuchBetterSchools.PowerSchool.Graph.SectionEnrollments;
-using MuchBetterSchools.PowerSchool.Graph.Sections;
-using MuchBetterSchools.PowerSchool.Services.Course;
 using MuchBetterSchools.PowerSchool.Services.Enrollments;
 using MuchBetterSchools.PowerSchool.Services.Schools;
-using MuchBetterSchools.PowerSchool.Services.SectionEnrollments;
-using MuchBetterSchools.PowerSchool.Services.Sections;
 
 namespace MuchBetterSchools.PowerSchool.Graph.Students
 {

@@ -8,5 +8,9 @@ namespace MuchBetterSchools.PowerSchool.Services.Sections
     public interface IPowerSchoolSectionService
     {
         public Task<IEnumerable<PowerSchoolSection>>GetAllBySchoolAndYear((string, string) schoolAndFourDigitYear, CancellationToken token);
+        
+        public Task<PowerSchoolSection> Get(string sectionNumber);
+
+        public Task<IEnumerable<PowerSchoolSection>> GetForSchool(string schoolId);
     }
 }

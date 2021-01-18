@@ -29,6 +29,7 @@ namespace MuchBetterSchools.PowerSchool.Api
                 .AddType<SchoolType>()
                 .AddType<StudentQuery>()
                 .AddType<EnrollmentQuery>()
+                .AddType<SectionQuery>()
                 .BindResolver<EnrollmentResolvers>()
                 .BindResolver<StudentResolvers>()
                 .AddQueryType<Query>();

@@ -114,6 +114,18 @@ namespace MuchBetterSchools.PowerSchool.Graph
                 StaffId = powerSchoolSection.StaffId
             };
         }
+
+        public static IEnumerable<Section> ToGraphType(this IEnumerable<PowerSchoolSection> powerSchoolSections)
+        {
+            var result = new List<Section>();
+
+            foreach (var section in powerSchoolSections)
+            {
+                result.Add(section.ToGraphType());
+            }
+
+            return result;
+        }
         
         public static SectionEnrollment ToGraphType(this PowerSchoolSectionEnrollment powerSchoolSectionEnrollment)
         {

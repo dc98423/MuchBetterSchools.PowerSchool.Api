@@ -20,6 +20,21 @@ namespace MuchBetterSchools.PowerSchool.Services.Sections
             });
         }
 
+        public async Task<PowerSchoolSection> Get(string sectionNumber)
+        {
+            return await Task.FromResult(MockSection(sectionNumber));
+        }
+
+        public async Task<IEnumerable<PowerSchoolSection>> GetForSchool(string schoolId)
+        {
+            return await Task.FromResult(new List<PowerSchoolSection>()
+            {
+                MockSection(schoolId: schoolId),
+                MockSection(schoolId: schoolId),
+                MockSection(schoolId: schoolId)
+            });
+        }
+
         private PowerSchoolSection MockSection((string,string) schoolAndYear)
         {
             return new PowerSchoolSection(
@@ -28,6 +43,20 @@ namespace MuchBetterSchools.PowerSchool.Services.Sections
                 Guid.NewGuid().ToString(),
                 Guid.NewGuid().ToString(),
                 Guid.NewGuid().ToString(),
+                Guid.NewGuid().ToString(),
+                Guid.NewGuid().ToString());
+        }
+        
+        private PowerSchoolSection MockSection(
+            string sectionNumber = null,
+            string schoolId = null)
+        {
+            return new PowerSchoolSection(
+                new Random().Next(),
+                schoolId ?? Guid.NewGuid().ToString(),
+                Guid.NewGuid().ToString(),
+                Guid.NewGuid().ToString(),
+                sectionNumber ?? Guid.NewGuid().ToString(),
                 Guid.NewGuid().ToString(),
                 Guid.NewGuid().ToString());
         }
